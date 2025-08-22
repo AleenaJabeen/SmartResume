@@ -65,8 +65,8 @@ function ExperienceLevel({ selected, onSelect }) {
             onClick={() => onSelect(years)}
             className={`text-2xl cursor-pointer p-4 rounded border 
               ${selected === years
-                ? "text-green-400 border-green-400"
-                : "text-[#7ADAA5] border-[#7ADAA5] hover:text-green-400 hover:border-green-400"}`}
+                ? "text-[#0A1733e0] border-[#0A1733]"
+                : "text-[#344666] border-[#344666] hover:text-[#0A1733] hover:border-[#0A1733]"}`}
           >
             {years}
           </div>
@@ -92,8 +92,8 @@ function Designation({ selected, onSelect }) {
             }}
             className={`text-xl cursor-pointer p-3 rounded border 
               ${selected === type
-                ? "text-green-400 border-green-400"
-                : "text-[#7ADAA5] border-[#7ADAA5] hover:text-green-400 hover:border-green-400"}`}
+               ? "text-[#0A1733] border-[#0A1733]"
+                : "text-[#344666] border-[#344666] hover:text-[#0A1733] hover:border-[#0A1733]"}`}
           >
             {type}
           </div>
@@ -125,8 +125,8 @@ const navigate=useNavigate();
             }}
             className={`text-xl cursor-pointer p-3 rounded border 
               ${selected === edu
-                ? "text-green-400 border-green-400"
-                : "text-[#7ADAA5] border-[#7ADAA5] hover:text-green-400 hover:border-green-400"}`}
+              ? "text-[#0A1733] border-[#0A1733]"
+                : "text-[#344666] border-[#344666] hover:text-[#0A1733] hover:border-[#0A1733]"}`}
           >
             {edu}
           </div>

@@ -53,17 +53,26 @@ function HeroSection() {
   return (
     <div className='flex justify-center items-center gap-8 py-2 px-16'>
         <div className='w-[50%] flex flex-col text-5xl font-bold'>
-            <h2>This resume <br /> builder gets you</h2>
-            <span className='text-[#7ADAA5] mb-2'>{text}</span>
+            <h2 className='text-[#0A1733]'>This resume <br /> builder gets you</h2>
+            <span className='bg-[#0A1733] text-white text-4xl rounded-full p-2 w-fit mb-2'>{text}</span>
             <div className='flex items-center gap-4'>
-              <button onClick={handleClick} className='text-center bg-[#7ADAA5] text-white font-medium text-xl p-4 rounded'>Create my resume</button>
-              <button onClick={handleATS} className='text-center text-[#7ADAA5] bg-blue-100 font-medium text-xl p-4 rounded'>Check ATS Score</button>
+              <button onClick={handleClick} className='text-center bg-[#0A1733] text-white font-medium text-xl p-4 rounded'>Create my resume</button>
+              <button onClick={handleATS} className='text-center text-[#0A1733] bg-[#8ba8bb] font-medium text-xl p-4 rounded'>Check ATS Score</button>
             </div>
 
         </div>
-        <div>
-            <img src={hero} alt="Hero Section Image" />
-        </div>
+       <div className="bg-[#0A1733] flex items-center justify-center p-6" 
+      style={{
+      borderRadius: "260% 60% 50% 50% / 260% 70% 50% 50%"
+  
+    }}>
+  <img
+    src={hero}
+    alt="Hero Section Image"
+    className="w-full h-84 object-cover"
+    
+  />
+</div>
       
     </div>
   )

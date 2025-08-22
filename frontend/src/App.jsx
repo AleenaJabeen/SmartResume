@@ -6,6 +6,7 @@ import ExperienceLevel from './components/home/ExperienceLevel'
 import ResumeForm from './components/home/ResumeForm'
 import RenderTemplate from './components/home/RenderTemplate'
 import ATSScore from './components/atsScore/atsScore'
+import ScrollToTop from './components/layout/ScrollToTop'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
+    <ScrollToTop/>
     <Routes>
       <Route path='/' element={<Layout/>}>
       <Route index element={<Home/>}/>

@@ -1,26 +1,57 @@
-import React from 'react'
-import { FaBlackTie } from "react-icons/fa6";
-import { LuFacebook } from "react-icons/lu";
-import { BsTwitterX } from "react-icons/bs";
-import { FaInstagram } from "react-icons/fa";
-import { FiYoutube } from "react-icons/fi";
+import { FaTwitter, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { MdFiberSmartRecord } from "react-icons/md";
 
-function Footer() {
+export default function Footer() {
   return (
-    <div className='p-4 flex justify-between items-center'>
-      <div className='flex justify-center items-center gap-2 text-[#7ADAA5] text-2xl font-semibold'>
-<FaBlackTie />SmartResume</div>
+    <footer className="bg-[#0A1733] text-gray-300 px-8 py-10">
+      <div className="max-w-9xl mx-auto">
+        {/* Top Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-gray-700 pb-8">
+          {/* Logo */}
+        <div>
+          <div className="text-white text-3xl items-center font-bold flex gap-2  px-2 py-1">
+    <MdFiberSmartRecord className="text-2xl" />
+    SmartResume 
+ </div>
+ </div>     
+          <div>
+            <h2 className="font-semibold text-white mb-3">Useful Links</h2>
+            <ul className="space-y-2">
+              <Link to="/"><li className="hover:text-white">Home</li></Link>
+              <Link><li  className="hover:text-white">Categories</li></Link>
+              <Link><li  className="hover:text-white">Templates</li></Link>
+            </ul>
+          </div>
 
-      <div className='flex flex-col text-gray-400 !bg-none'>
-          <ul className='flex justify-center items-center gap-6 text-sm font-medium py-2 px-4 !bg-none hover:text-black'>
-          <li>Home</li>
-        <li>Pricing</li>
-        <li>CVTemplate</li>
-        <li>Contact</li></ul>
-        <div className='flex gap-12 hover:text-black items-center justify-end text-2xl p-2s'><LuFacebook /><BsTwitterX /><FaInstagram /><FiYoutube /></div>
+          {/* Categorías */}
+          <div>
+            <h2 className="font-semibold text-white mb-3">Categorías</h2>
+            <ul className="grid grid-cols-1 gap-y-2">
+              <Link><li  className="hover:text-white">Resume</li></Link>
+              <Link><li className="hover:text-white">CV</li></Link>
+              <Link><li className="hover:text-white">Cover Letter</li></Link>
+             
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-6">
+          {/* Social Icons */}
+          <div className="flex space-x-4 mb-4 md:mb-0">
+            <Link to="#" className="hover:text-white"><FaTwitter size={18} /></Link>
+            <Link to="#" className="hover:text-white"><FaLinkedinIn size={18} /></Link>
+            <Link to="#" className="hover:text-white"><FaFacebookF size={18} /></Link>
+          </div>
+
+          {/* Legal Links */}
+          <div className="flex flex-wrap gap-6 text-sm">
+            <p  className="hover:text-white">&copy; 2019.All rights reserved. </p>
+        
+          </div>
+        </div>
       </div>
-    </div>
-  )
+    </footer>
+  );
 }
-
-export default Footer

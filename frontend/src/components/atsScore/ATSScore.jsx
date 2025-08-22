@@ -39,10 +39,10 @@ function ATSScore() {
 
   return (
     <>
-    <div className="p-4 flex justify-center items-center gap-4">
+    <div className="p-4 flex flex-col justify-center items-center gap-4">
       <div className="w-[40%]">
         <textarea
-     className="w-full h-72 border-2 rounded border-gray-300 p-2"
+     className="w-full focus:outline-none h-72 border-2 rounded border-gray-500 p-2"
           placeholder="Paste your Job description here"
            value={jobDescription}
            onChange={(e) => setJobDescription(e.target.value)}
@@ -55,7 +55,7 @@ function ATSScore() {
         </label>
       </div>
     </div>
-    <button onClick={handleCheckScore} className="bg-[#7ADAA5] text-white my-4 p-2 flex justify-center items-center w-36 mx-auto">Check score</button>
+    <button onClick={handleCheckScore} className="bg-[#0A1733] rounded text-white my-4 p-2 flex justify-center items-center w-36 mx-auto">Check score</button>
     {result && (
         <div className="mt-4 p-4 text-xl text-center">
           <h3 className="text-green-500">ATS Score: {result.atsScore}%</h3>

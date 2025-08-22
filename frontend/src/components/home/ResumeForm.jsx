@@ -231,7 +231,7 @@ const downloadPDF = async () => {
   return (
     <div className="flex min-h-screen bg-gray-50">
       {/* Sidebar */}
-      <aside className="w-60 bg-[#7ADAA5] text-white p-6 space-y-6">
+      <aside className="w-60 bg-[#0A1733] text-white p-6 space-y-6">
         <h2 className="text-xl font-bold">SmartResume</h2>
         <ul className="space-y-2 list-disc ps-6 text-lg">
           <li className={step === 1 ? "font-extrabold" : "font-normal"}>Heading</li>
@@ -261,7 +261,7 @@ const downloadPDF = async () => {
           {/* Step 1 - Heading */}
           {step === 1 && (
             <>
-              <h2 className="text-xl font-bold mb-4">Contact Information</h2>
+              <h2 className="text-xl text-[#0A1733] font-bold mb-4">Contact Information</h2>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <input
@@ -334,7 +334,7 @@ const downloadPDF = async () => {
           {/* Step 2 - Experience */}
           {step === 2 && (
             <>
-              <h2 className="text-xl font-bold mb-4">Experience</h2>
+              <h2 className="text-xl font-bold mb-4 text-[#0A1733]">Experience</h2>
               {resumeData.experience.map((exp, idx) => (
                 <div key={idx} className="mb-4 border p-3 rounded">
                   <div className="grid grid-cols-2 gap-2">
@@ -427,7 +427,7 @@ const downloadPDF = async () => {
               <button
                 type="button"
                 onClick={addExperience}
-                className="bg-green-500 text-white px-3 py-1 rounded"
+                className="bg-green-500  text-white px-3 py-1 rounded"
               >
                 + Add Experience
               </button>
@@ -437,7 +437,7 @@ const downloadPDF = async () => {
           {/* Step 3 - Education */}
           {step === 3 && (
             <>
-              <h2 className="text-xl font-bold mb-4">Education</h2>
+              <h2 className="text-xl font-bold mb-4 text-[#0A1733]">Education</h2>
               {resumeData.education.map((edu, idx) => (
                 <div key={idx} className="mb-4 border p-3 rounded">
                   <div className="grid grid-cols-2 gap-2">
@@ -509,7 +509,7 @@ const downloadPDF = async () => {
           {/* Step 4 - Skills */}
           {step === 4 && (
             <>
-              <h2 className="text-xl font-bold mb-4">Skills</h2>
+              <h2 className="text-xl font-bold mb-4 text-[#0A1733]">Skills</h2>
               {resumeData.skills.map((skill, idx) => (
                 <div key={idx} className="flex items-center gap-2 mb-2">
                   <input
@@ -544,7 +544,7 @@ const downloadPDF = async () => {
           {/* Step 5 - Summary */}
           {step === 5 && (
             <>
-              <h2 className="text-xl font-bold mb-4">Summary</h2>
+              <h2 className="text-xl font-bold mb-4 text-[#0A1733]">Summary</h2>
               <textarea
                 placeholder="Professional Summary"
                 value={resumeData.summary}
@@ -558,7 +558,7 @@ const downloadPDF = async () => {
           {/* Step 6 - Additional Info */}
           {step === 6 && (
             <>
-              <h2 className="text-xl font-bold mb-4">Additional Information</h2>
+              <h2 className="text-xl font-bold mb-4 text-[#0A1733]">Additional Information</h2>
               <input
                 type="text"
                 placeholder="Languages (e.g., English, French)"
@@ -598,7 +598,7 @@ const downloadPDF = async () => {
               <button
                 type="button"
                 onClick={nextStep}
-                className="px-4 py-2 bg-[#7ADAA5] text-white rounded"
+                className="px-4 py-2 text-white bg-[#0A1733] rounded"
               >
                 Next
               </button>
@@ -610,17 +610,17 @@ const downloadPDF = async () => {
               onClick={() => {
                 if (validateStep(step)) generatePreview();
               }}
-              className="ml-auto px-4 py-2 bg-indigo-600 text-white rounded"
+              className="ml-auto px-4  hidden py-2 bg-indigo-600 text-white rounded"
               disabled={loadingPreview}
             >
-              {loadingPreview ? "Generating Preview..." : "Generate Preview"}
+              {/* {loadingPreview ? "Generating Preview..." : "Generate Preview"} */}
             </button>
 
             {/* Download PDF */}
             <button
               type="button"
               onClick={downloadPDF}
-              className="px-4 py-2 bg-pink-600 text-white rounded"
+              className="px-4 py-2 bg-green-700 text-white rounded"
               disabled={downloading}
             >
               {downloading ? "Downloading..." : "Download PDF"}
